@@ -1,0 +1,41 @@
+;paint.net Palette File
+;Downloaded from Lospec.com/palette-list
+;Palette Name: Endesga 36
+;Description: Created by <a href="https://twitter.com/ENDESGA" target="_blank" >Endesga</a>. #edg36
+;Colors: 36
+FFdbe0e7
+FFa3acbe
+FF67708b
+FF4e5371
+FF393a56
+FF26243a
+FF141020
+FF7bcf5c
+FF509b4b
+FF2e6a42
+FF1a453b
+FF0f2738
+FF0d2f6d
+FF0f4da3
+FF0e82ce
+FF13b2f2
+FF41f3fc
+FFf0d2af
+FFe5ae78
+FFc58158
+FF945542
+FF623530
+FF46211f
+FF97432a
+FFe57028
+FFf7ac37
+FFfbdf6b
+FFfe979b
+FFed5259
+FFc42c36
+FF781f2c
+FF351428
+FF4d2352
+FF7f3b86
+FFb45eb3
+FFe38dd6
