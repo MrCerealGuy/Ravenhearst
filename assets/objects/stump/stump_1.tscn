@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/objects/object_not_solid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/objects/stump/tileset_stump.png" type="Texture" id=2]
+
+[node name="stump_1" instance=ExtResource( 1 )]
+
+loot_container = 3
+
+[node name="sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+vframes = 3
+hframes = 3
+
+[node name="collision" parent="." index="1"]
+
+visible = true
+position = Vector2( -3, 22 )
+scale = Vector2( 1.15385, 0.114299 )
+
+

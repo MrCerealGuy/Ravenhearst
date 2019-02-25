@@ -1,0 +1,263 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/menu/PauseMenu.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/menu/ResumeLevel.gd" type="Script" id=3]
+[ext_resource path="res://assets/menu/RestartLevel.gd" type="Script" id=4]
+[ext_resource path="res://assets/menu/ExitLevel.gd" type="Script" id=5]
+[ext_resource path="res://assets/menu/menu_select.wav" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 70
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="PauseMenu" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Margin", "Rect" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+_sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "custom_constants" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1004.0
+margin_bottom = 556.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 30
+alignment = 0
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "custom_constants" ]
+
+[node name="TitleContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 984.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 0, 80 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 0
+custom_constants/margin_top = 100
+custom_constants/margin_bottom = 0
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "custom_constants" ]
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/TitleContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 100.0
+margin_right = 984.0
+margin_bottom = 186.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/line_spacing = 0
+custom_constants/shadow_as_outline = 0
+text = "PAUSED!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="ButtonContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 216.0
+margin_right = 984.0
+margin_bottom = 416.0
+rect_min_size = Vector2( 0, 200 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags" ]
+
+[node name="VButtonArray" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 418.0
+margin_top = 45.0
+margin_right = 565.0
+margin_bottom = 155.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 7
+alignment = 0
+_sections_unfolded = [ "Margin", "Theme", "custom_constants" ]
+
+[node name="ResumeLevel" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 147.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Resume"
+flat = false
+align = 1
+script = ExtResource( 3 )
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="RestartLevel" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 39.0
+margin_right = 147.0
+margin_bottom = 71.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Restart level"
+flat = false
+align = 1
+script = ExtResource( 4 )
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="ExitLevel" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 78.0
+margin_right = 147.0
+margin_bottom = 110.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Exit level"
+flat = false
+align = 1
+script = ExtResource( 5 )
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="sound_select" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray/ResumeLevel" to="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray/ResumeLevel" method="_on_ResumeLevel_pressed"]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray/RestartLevel" to="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray/RestartLevel" method="_on_RestartLevel_pressed"]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray/ExitLevel" to="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray/ExitLevel" method="_on_ExitLevel_pressed"]
+
+

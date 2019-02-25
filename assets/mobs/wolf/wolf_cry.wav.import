@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/wolf_cry.wav-03b915aa7f16531633499557531f466c.sample"
+
+[deps]
+
+source_file="res://assets/mobs/wolf/wolf_cry.wav"
+dest_files=[ "res://.import/wolf_cry.wav-03b915aa7f16531633499557531f466c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

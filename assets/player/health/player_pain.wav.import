@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/player_pain.wav-56f20b9b1b87b31316a47c9e5c8c40c9.sample"
+
+[deps]
+
+source_file="res://assets/player/health/player_pain.wav"
+dest_files=[ "res://.import/player_pain.wav-56f20b9b1b87b31316a47c9e5c8c40c9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

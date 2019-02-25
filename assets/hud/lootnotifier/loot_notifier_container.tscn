@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/hud/lootnotifier/loot_notifier_container.gd" type="Script" id=1]
+[ext_resource path="res://assets/hud/lootnotifier/loot_notifier.tscn" type="PackedScene" id=2]
+
+[node name="loot_notifier_container" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 18
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="loot_notifier_2" parent="VBoxContainer" index="0" instance=ExtResource( 2 )]
+
+margin_bottom = 0.0
+
+[node name="loot_notifier_1" parent="VBoxContainer" index="1" instance=ExtResource( 2 )]
+
+margin_top = 18.0
+margin_bottom = 18.0
+
+[node name="loot_notifier_0" parent="VBoxContainer" index="2" instance=ExtResource( 2 )]
+
+margin_top = 36.0
+margin_bottom = 36.0
+
+[node name="timer_visible" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="timer_visible" to="." method="_on_timer_visible_timeout"]
+
+

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/objects/object_not_solid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/objects/stone/stone.png" type="Texture" id=2]
+
+[node name="stone_2" index="0" instance=ExtResource( 1 )]
+
+loot_container = 1
+
+[node name="sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+hframes = 6
+frame = 1
+
+[node name="collision" parent="." index="1"]
+
+position = Vector2( -3, 24 )
+scale = Vector2( 1.15385, 0.114299 )
+
+

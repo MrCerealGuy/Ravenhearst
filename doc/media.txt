@@ -1,0 +1,3 @@
+# Placing object
+source	: https://freesound.org/people/NNNIKKI/sounds/434130/
+file	: placing_block.wav

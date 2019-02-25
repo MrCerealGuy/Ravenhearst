@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/items/ironpickaxe/ironpickaxe_wielded.gd" type="Script" id=1]
+[ext_resource path="res://assets/items/ironpickaxe/ironpickaxe_wielded.png" type="Texture" id=2]
+[ext_resource path="res://assets/items/ironpickaxe/sound_mining.wav" type="AudioStream" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10.0521, 10 )
+
+[node name="ironpickaxe_wielded" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="collision" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -2.02481, -0.0131402 )
+scale = Vector2( 1.78304, 0.424791 )
+shape = SubResource( 1 )
+disabled = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="detect_hit_right" type="RayCast2D" parent="." index="2"]
+
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 25, 25 )
+collision_mask = 24
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="detect_hit_left" type="RayCast2D" parent="." index="3"]
+
+rotation = 1.5708
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 25, 25 )
+collision_mask = 24
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="timer_mining" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = true
+autostart = false
+
+[node name="sound_mining" type="AudioStreamPlayer2D" parent="." index="5"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[connection signal="timeout" from="timer_mining" to="." method="_on_timer_mining_timeout"]
+
+

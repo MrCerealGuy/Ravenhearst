@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/strange_atmosphere.wav-e0675f908d5524b144c507720bee4bde.sample"
+
+[deps]
+
+source_file="res://assets/sound/strange_atmosphere.wav"
+dest_files=[ "res://.import/strange_atmosphere.wav-e0675f908d5524b144c507720bee4bde.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

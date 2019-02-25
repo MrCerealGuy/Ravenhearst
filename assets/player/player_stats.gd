@@ -1,0 +1,11 @@
+extends Node
+
+# Player states
+enum {PLAYER_STATE_NORMAL, PLAYER_STATE_KILLED}
+
+# Health states
+enum {HEALTH_STATE_OK, HEALTH_STATE_DEPLETED, HEALTH_STATE_KILLED}
+
+const MAX_HEALTH = 2
+
+

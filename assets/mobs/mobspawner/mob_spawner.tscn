@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/mobs/mobspawner/mob_spawner.gd" type="Script" id=1]
+[ext_resource path="res://assets/icon/placeholder_64.png" type="Texture" id=2]
+
+[node name="MobSpawner" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+mob_id = -1
+max_mobs = 0
+mob_direction = 0
+
+[node name="Label" type="Label" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -77.0
+margin_top = -74.0
+margin_right = 4.0
+margin_bottom = -60.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "MobSpawner"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Rect" ]
+
+[node name="MobSprite" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="SpawnPoint" type="Position2D" parent="." index="2"]
+
+[node name="TimerNextSpawn" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="SpawnedMobsContainer" type="Node2D" parent="." index="4"]
+
+[connection signal="timeout" from="TimerNextSpawn" to="." method="_on_TimerNextSpawn_timeout"]
+
+

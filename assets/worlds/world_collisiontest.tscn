@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/landscape/canyon/tileset_canyon.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/mobs/wolf/wolf.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/player/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/objects/scarecrow/scarecrow.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/shader/shader_sepia.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/shader/shader_night.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/shader/shader_oldfilm.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/objects/stone/stone_4.tscn" type="PackedScene" id=8]
+
+[node name="World_CollisionTest" type="TileMap" index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 262153, 5, 0, 327689, 5, 0, 393225, 5, 0, 393226, 43, 0, 458752, 28, 0, 458761, 5, 0, 458762, 5, 0, 458763, 43, 0, 458769, 15, 0, 524288, 5, 0, 524289, 3, 0, 524290, 3, 0, 524291, 3, 0, 524292, 3, 0, 524293, 3, 0, 524294, 3, 0, 524295, 3, 0, 524296, 3, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 5, 0, 524301, 5, 0, 524302, 5, 0, 524303, 5, 0, 524304, 5, 0, 524305, 5, 0, 589824, 5, 0, 589825, 5, 0, 589826, 5, 0, 589827, 5, 0, 589828, 5, 0, 589829, 5, 0, 589830, 5, 0, 589831, 5, 0, 589832, 5, 0, 589833, 5, 0, 589834, 5, 0, 589835, 5, 0, 589836, 5, 0, 589837, 5, 0, 589838, 5, 0, 589839, 5, 0, 589840, 5, 0, 589841, 5, 0, 655360, 5, 0, 655361, 5, 0, 655362, 5, 0, 655363, 5, 0, 655364, 5, 0, 655365, 5, 0, 655366, 5, 0, 655367, 5, 0, 655368, 5, 0, 655369, 5, 0, 655370, 5, 0, 655371, 5, 0, 655372, 5, 0, 655373, 5, 0, 655374, 5, 0, 655375, 5, 0, 655376, 5, 0, 655377, 5, 0, 720896, 5, 0, 720897, 5, 0, 720898, 5, 0, 720899, 5, 0, 720900, 5, 0, 720901, 5, 0, 720902, 5, 0, 720903, 5, 0, 720904, 5, 0, 720905, 5, 0, 720906, 5, 0, 720907, 5, 0, 720908, 5, 0, 720909, 5, 0, 720910, 5, 0, 720911, 5, 0, 720912, 5, 0, 720913, 5, 0, 786432, 5, 0, 786433, 5, 0, 786434, 5, 0, 786435, 5, 0, 786436, 5, 0, 786437, 5, 0, 786438, 5, 0, 786439, 5, 0, 786440, 5, 0, 786441, 5, 0, 786442, 5, 0, 786443, 5, 0, 786444, 5, 0, 786445, 5, 0, 786446, 5, 0, 786447, 5, 0, 786448, 5, 0, 786449, 5, 0, 851968, 5, 0, 851969, 5, 0, 851970, 5, 0, 851971, 5, 0, 851972, 5, 0, 851973, 5, 0, 851974, 5, 0, 851975, 5, 0, 851976, 5, 0, 851977, 5, 0, 851978, 5, 0, 851979, 5, 0, 851980, 5, 0, 851981, 5, 0, 851982, 5, 0, 851983, 5, 0, 851984, 5, 0, 851985, 5, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Occluder", "Transform", "Visibility", "Z Index" ]
+
+[node name="Label" type="Label" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 70.0
+margin_top = 300.0
+margin_right = 320.0
+margin_bottom = 314.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Dies ist ein Kollisions-Test mit Wölfen!"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Size Flags" ]
+
+[node name="enemies" type="Node2D" parent="." index="1"]
+
+[node name="wolf" parent="enemies" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 953, 470 )
+
+[node name="player_1" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 116.557, 479.006 )
+player_id = 1
+
+[node name="scarecrow" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 250, 480 )
+
+[node name="shader_sepia" parent="." index="4" instance=ExtResource( 5 )]
+
+visible = false
+
+[node name="shader_night" parent="." index="5" instance=ExtResource( 6 )]
+
+visible = false
+
+[node name="shader_oldfilm" parent="." index="6" instance=ExtResource( 7 )]
+
+visible = false
+
+[node name="stone_4" parent="." index="7" instance=ExtResource( 8 )]
+
+position = Vector2( 440, 480 )
+
+

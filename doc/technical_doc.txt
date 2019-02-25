@@ -1,0 +1,100 @@
+Inventory/Hotbar system
+========================
+
+
+UI tier						Data tier
+---------------------------------------
+
+Hotbar/Inventory
+|
+|
+|
+SlotContainer	-	-	-	ItemContainer
+(VBoxContainer)				(Node)
+|							|
+|							|
+consists of 1 or more		|
+|Row						|
+(HBoxContainer)				|
+|							|
+|							|
+ItemSlot	-	-	-	-	ItemStack
+(Control)					(Node)
+							|
+							|
+							consists of stack of items
+							or only 1 item
+							|
+							|
+							Item
+							(Node)
+
+							
+							
+NEU:
+
+
+Hotbar/Inventory
+|
+|
+SlotContainer (VBoxContainer)
+|
+|
+	consists of 1 or more
+|
+|
+Row (HBoxContainer)
+|
+|
+		consists of 1 or more
+|
+|
+ItemSlot (Control)
+|
+|
+		has 1
+|
+|
+ItemStack (Node)
+|
+|
+	consists of stack of items
+	or only 1 item
+|
+|
+Item (Node)
+
+
+
+Example Hotbar:
+ __  __  __  __  __  __  __ 
+|   |   |   |   |   |   |   | 
+ --  --  --  --  --  --  -- 
+ 
+ 1 SlotContainer with 1 Row (HBoxContainer) and 8 ItemSlots. 
+ 
+ 
+ 
+Objects
+=========================
+ 
+ 
+ 
+				objects
+				|
+				|
+ object_sold			object_not_solid
+ |
+ |
+ block
+ |
+ |
+ wood_block
+ 
+ 
+ 
+Items
+=========================
+
+
+

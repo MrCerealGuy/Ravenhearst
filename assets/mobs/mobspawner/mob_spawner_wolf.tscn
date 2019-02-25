@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/mobs/mobspawner/mob_spawner.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/mobs/wolf/wolf.png" type="Texture" id=2]
+
+[node name="MobSpawnerWolf" instance=ExtResource( 1 )]
+
+mob_id = 0
+
+[node name="Label" parent="." index="0"]
+
+margin_left = -103.0
+margin_top = -73.0
+margin_right = 11.0
+margin_bottom = -59.0
+text = "MobSpawner Wolf"
+
+[node name="MobSprite" parent="." index="1"]
+
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 2
+
+

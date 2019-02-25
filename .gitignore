@@ -6,3 +6,9 @@ export_presets.cfg
 
 # Mono-specific ignores
 .mono/
+
+
+# my ignores
+export/
+concept/
+tools/

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sound_mining.wav-7e95d57053915b9930370566d8c2f7ab.sample"
+
+[deps]
+
+source_file="res://assets/items/ironpickaxe/sound_mining.wav"
+dest_files=[ "res://.import/sound_mining.wav-7e95d57053915b9930370566d8c2f7ab.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
