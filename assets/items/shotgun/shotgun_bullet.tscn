@@ -4,43 +4,21 @@
 [ext_resource path="res://assets/items/shotgun/shotgun_bullet.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
 extents = Vector2( 0.0676956, 0.0765221 )
 
 [node name="shotgun_bullet" type="RigidBody2D"]
-
-input_pickable = false
 collision_layer = 256
 collision_mask = 151
-mode = 0
 mass = 0.1
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
 contacts_reported = 1
 contact_monitor = true
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
 
-[node name="sprite" type="Sprite" parent="." index="0"]
-
+[node name="sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="collision" type="CollisionShape2D" parent="." index="1"]
-
+[node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2( -0.00900841, -0.00900817 )
 shape = SubResource( 1 )
 
 [connection signal="body_entered" from="." to="." method="_on_shotgun_bullet_body_entered"]
-
-

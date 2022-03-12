@@ -3,34 +3,15 @@
 [ext_resource path="res://assets/objects/object_not_solid.gd" type="Script" id=1]
 
 [sub_resource type="CapsuleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 10.0
 height = 40.0
 
-[node name="ObjectNotSolid" type="Area2D" index="0"]
-
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
+[node name="ObjectNotSolid" type="Area2D"]
 collision_layer = 8
-collision_mask = 2
-audio_bus_override = false
-audio_bus_name = "Master"
+collision_mask = 0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
-loot_container = 0
 
-[node name="sprite" type="Sprite" parent="." index="0"]
+[node name="sprite" type="Sprite" parent="."]
 
-_sections_unfolded = [ "Animation", "Offset", "Region" ]
-
-[node name="collision" type="CollisionShape2D" parent="." index="1"]
-
+[node name="collision" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-
-

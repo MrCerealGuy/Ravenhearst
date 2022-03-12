@@ -16,7 +16,7 @@ onready var backpack_2  = $Backpack_2
 
 func setup_hud():
 	match global.game_mode:
-		global.GM_SINGLEPLAYER:
+		global.GAME_MODES.GM_SINGLEPLAYER:
 			# hotbar
 			hotbar_1.rect_position.x = (global.screen_x / 2) - 		\
 				((hotbar_1.rect_size.x*global.hud_scale_x) / 2)
@@ -37,7 +37,7 @@ func setup_hud():
 			
 			global.backpack1_node = backpack_1
 			global.backpack2_node = null
-		global.GM_LOCALCOOP:
+		global.GAME_MODES.GM_LOCALCOOP:
 			# hotbar
 			hotbar_1.rect_position.x = (global.screen_x / 4) - 		\
 				((hotbar_1.rect_size.x*global.hud_scale_x) / 2)
@@ -77,13 +77,13 @@ func setup_camera_and_viewport():
 	viewport2.world_2d = viewport1.world_2d
 	
 	match global.game_mode:
-		global.GM_SINGLEPLAYER:
+		global.GAME_MODES.GM_SINGLEPLAYER:
 			$Viewports/ViewportContainer_2.visible = false
 			camera1.set_target(1, global.player1_node)
 			camera2.set_target(2, null)
 			
 			global.player2_node.queue_free()
-		global.GM_LOCALCOOP:
+		global.GAME_MODES.GM_LOCALCOOP:
 			$Viewports/ViewportContainer_2.visible = true
 			camera1.set_target(1, global.player1_node)
 			camera2.set_target(2, global.player2_node)

@@ -16,5 +16,5 @@ func _ready():
 
 
 func _on_2Player_pressed():
-	global.game_mode = global.GM_LOCALCOOP
+	global.game_mode = global.GAME_MODES.GM_LOCALCOOP
 	get_tree().change_scene(global.GAME_SCENE_PATH)

@@ -1,11 +1,11 @@
 						  Layer / Mask Bit
-World (Tiles)			: 0 / 0
-Player node				: 1 / 0,2,4
-Enemy node				: 2 / 0,1,4
-Object node (not solid)	: 3 / 1
-Object node (solid)		: 4 / 1,2
-Item node				: 5 / 1
+World (Tiles)			: 1 / 1
+Player node				: 2 / 1,5
+Enemy node				: 3 / 1,5
+Object node (not solid)	: 4 / -
+Object node (solid)		: 5 / 2,3
+Item node				: 6 / 3
 Wielded items			: same as player node
-Cave (Tiles)			: 6 / 1
-Blocks					: 7 / 1,2
-Projectile				: 8 / 0,1,2,4,7
+Cave (Tiles)			: 7 / 2
+Blocks					: 8 / 2,3
+Projectile				: 9 / 1,2,3,5,8

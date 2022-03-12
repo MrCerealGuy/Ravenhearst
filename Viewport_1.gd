@@ -4,10 +4,10 @@ extends Viewport
 
 func _ready():
 	match global.game_mode:
-		global.GM_SINGLEPLAYER:
+		global.GAME_MODES.GM_SINGLEPLAYER:
 			size.x = global.screen_x
 			size.y = global.screen_y
-		global.GM_LOCALCOOP:
+		global.GAME_MODES.GM_LOCALCOOP:
 			size.x = (global.screen_x / 2)-3
 			size.y = global.screen_y
 	

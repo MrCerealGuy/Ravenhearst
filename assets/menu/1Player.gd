@@ -16,5 +16,5 @@ func _ready():
 
 
 func _on_1Player_pressed():
-	global.game_mode = global.GM_SINGLEPLAYER
+	global.game_mode = global.GAME_MODES.GM_SINGLEPLAYER
 	get_tree().change_scene(global.GAME_SCENE_PATH)

@@ -10,299 +10,115 @@
 [ext_resource path="res://assets/menu/menu_select.wav" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
-
 size = 70
-use_mipmaps = false
-use_filter = false
 font_data = ExtResource( 3 )
-_sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
-
 size = 20
-use_mipmaps = false
-use_filter = false
 font_data = ExtResource( 3 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=3]
-
 size = 20
-use_mipmaps = false
-use_filter = false
 font_data = ExtResource( 3 )
-_sections_unfolded = [ "Font", "Settings" ]
 
-[node name="MainMenu" type="Control" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Margin", "Rect" ]
 
-[node name="Background" type="Sprite" parent="." index="0"]
-
+[node name="Background" type="Sprite" parent="."]
 scale = Vector2( 1.28, 1 )
 texture = ExtResource( 2 )
 centered = false
-_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Z Index" ]
 
-[node name="MarginContainer" type="MarginContainer" parent="." index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = 30.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/margin_right = 20
 custom_constants/margin_top = 20
 custom_constants/margin_left = 20
 custom_constants/margin_bottom = 20
-_sections_unfolded = [ "Grow Direction", "Hint", "Rect", "Size Flags", "custom_constants" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 1004.0
 margin_bottom = 586.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 80
-alignment = 0
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "custom_constants" ]
 
-[node name="TitleContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="TitleContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
 margin_right = 984.0
 margin_bottom = 86.0
 rect_min_size = Vector2( 0, 80 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 
-[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/TitleContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 8.0
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/TitleContainer"]
 margin_right = 984.0
 margin_bottom = 86.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 5
 custom_constants/line_spacing = 0
 custom_constants/shadow_as_outline = 0
+custom_fonts/font = SubResource( 1 )
 text = "Ravenhearst"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags", "custom_colors", "custom_constants", "custom_fonts" ]
 
-[node name="ButtonContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ButtonContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
 margin_top = 166.0
 margin_right = 984.0
 margin_bottom = 366.0
 rect_min_size = Vector2( 0, 200 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
-_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 
-[node name="VButtonArray" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="VButtonArray" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ButtonContainer"]
 margin_left = 419.0
 margin_top = 45.0
 margin_right = 564.0
 margin_bottom = 155.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 7
-alignment = 0
-_sections_unfolded = [ "Margin", "Theme", "custom_constants" ]
 
-[node name="1Player" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="1Player" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray"]
 margin_right = 145.0
 margin_bottom = 32.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_fonts/font = SubResource( 2 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Singleplayer"
-flat = false
-align = 1
 script = ExtResource( 4 )
-_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="2Player" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="2Player" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray"]
 margin_top = 39.0
 margin_right = 145.0
 margin_bottom = 71.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_fonts/font = SubResource( 2 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Local Coop"
-flat = false
-align = 1
 script = ExtResource( 5 )
-_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray"]
 margin_top = 78.0
 margin_right = 145.0
 margin_bottom = 110.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_fonts/font = SubResource( 2 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Exit"
-flat = false
-align = 1
 script = ExtResource( 6 )
-_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="Credits" type="Label" parent="MarginContainer/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Credits" type="Label" parent="MarginContainer/VBoxContainer"]
 margin_top = 446.0
 margin_right = 984.0
 margin_bottom = 472.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Copyright 2018"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
 
-[node name="shader_sepia" parent="." index="2" instance=ExtResource( 7 )]
-
+[node name="shader_sepia" parent="." instance=ExtResource( 7 )]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 0.0
 margin_bottom = 0.0
 
-[node name="sound_select" type="AudioStreamPlayer" parent="." index="3"]
-
+[node name="sound_select" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Master"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray/1Player" to="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray/1Player" method="_on_1Player_pressed"]
-
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray/2Player" to="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray/2Player" method="_on_2Player_pressed"]
-
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray/Exit" to="MarginContainer/VBoxContainer/ButtonContainer/VButtonArray/Exit" method="_on_Exit_pressed"]
-
-

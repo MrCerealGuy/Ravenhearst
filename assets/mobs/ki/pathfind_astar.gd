@@ -119,7 +119,7 @@ func calculate_point_index(point):
 	return point.x + map_size.x * point.y
 
 
-func get_path(world_start, world_end):	
+func _get_path(world_start, world_end):
 	self.path_start_position = map.world_to_map(world_start)
 	self.path_end_position = map.world_to_map(world_end)
 	_recalculate_path()

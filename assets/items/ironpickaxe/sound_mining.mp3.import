@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sound_mining.mp3-7bc1dafd8a961e4f07edf47b8604047a.mp3str"
+
+[deps]
+
+source_file="res://assets/items/ironpickaxe/sound_mining.mp3"
+dest_files=[ "res://.import/sound_mining.mp3-7bc1dafd8a961e4f07edf47b8604047a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

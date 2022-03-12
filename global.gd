@@ -1,9 +1,9 @@
 extends Node
 
-const DEBUG=true
+const DEBUG=false
 
 enum GAME_MODES {GM_SINGLEPLAYER, GM_LOCALCOOP}
-var game_mode = GM_SINGLEPLAYER
+var game_mode = GAME_MODES.GM_SINGLEPLAYER
 
 const GAME_SCENE_PATH="res://Ravenhearst.tscn"
 const MAINMENU_SCENE_PATH="res://assets/menu/MainMenu.tscn"

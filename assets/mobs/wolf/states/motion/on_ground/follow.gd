@@ -17,7 +17,7 @@ func enter():
 
 	if not owner.focused_player == null:
 		# AStar
-		path = owner.pathfind_astar.get_path(owner.position, owner.focused_player.position)
+		path = owner.pathfind_astar._get_path(owner.position, owner.focused_player.position)
 	else:
 		emit_signal("finished", "move")
 		return
